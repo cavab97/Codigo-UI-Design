@@ -3,7 +3,6 @@ import React from 'react';
 import Button from '../../components/Button/button';
 import {MainColour} from '../../helpers/colors';
 import {matrix} from '../../helpers';
-import {SELECTION_ONE} from '../../navigation/Constants';
 function HomeView({navigation}: any) {
   return (
     <View
@@ -61,7 +60,7 @@ function HomeView({navigation}: any) {
           alignItems: 'center',
         }}>
         <Button
-          $onPress={() => navigation.navigate(SELECTION_ONE)}
+          // $onPress={() => navigation.navigate(SELECTION_ONE)}
           $brColor={MainColour(true).secondaryColour}>
           <Text
             style={{fontWeight: 'bold', fontSize: matrix.moderateScale(20)}}>
