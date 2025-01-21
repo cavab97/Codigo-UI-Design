@@ -3,43 +3,22 @@ import React from 'react';
 import Button from '../../components/Button/button';
 import {MainColour} from '../../helpers/colors';
 import {matrix} from '../../helpers';
+import ImageSliderComponent from '../../components/ImageSlider';
 function HomeView({navigation}: any) {
   return (
     <View
       style={{
         flex: 1,
-        alignItems: 'center',
+        // alignItems: 'center',
         backgroundColor: '#D3F3E6',
         justifyContent: 'space-evenly',
-        paddingHorizontal: matrix.horizontalScale(20),
+        paddingHorizontal: matrix.horizontalScale(0),
       }}>
       <StatusBar animated={true} backgroundColor="#61dafb" hidden={true} />
-      <Text
-        style={{
-          fontWeight: 'bold',
-          fontSize: matrix.moderateScale(30),
-          alignSelf: 'flex-start',
-        }}>
-        Welcome to DailyVita
-      </Text>
-      <Text
-        style={{
-          fontWeight: 'bold',
-          fontSize: matrix.moderateScale(18),
-          alignSelf: 'flex-start',
-        }}>
-        Hello, we are here to make your life healthier and happier
-      </Text>
+      <View style={{height: '30%', marginTop: 10}}>
+        <ImageSliderComponent />
+      </View>
 
-      <Image
-        source={require('../../assets/images/introImage.png')}
-        resizeMode="contain"
-        style={{
-          width: matrix.horizontalScale(250),
-          height: matrix.verticalScale(250),
-        }}
-        borderRadius={10}
-      />
       <Text
         style={{
           fontWeight: 'bold',

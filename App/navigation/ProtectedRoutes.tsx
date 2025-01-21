@@ -7,8 +7,9 @@ import LoginContainer from '../screens/Auth/Login/login.container';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SelectionOneContainer from '../screens/Home/selectionScreen/selectionOne.container';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/Ionicons';
 import ImageComponent from '../components/Image';
+import {Text, View} from 'react-native';
 
 // const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -35,7 +36,27 @@ function ProtectedRoutes() {
         name={HOME_ROUTE}
         component={HomeContainer}
         options={{
-          tabBarIcon: ({color}) => ImageComponent('home'),
+          headerLeft: () => (
+            <View>
+              <Icon name="chevron-back" size={30} color="black" />
+            </View>
+          ),
+          headerRight: () => (
+            <View>
+              <Icon name="notifications-outline" size={30} color="black" />
+            </View>
+          ),
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#fff',
+            elevation: 0,
+            shadowOpacity: 0,
+            height: 80,
+          },
+          headerTitle: () => (
+            <View style={{padding: 10}}>{ImageComponent('appIcon')}</View>
+          ),
+          tabBarIcon: ({color, size, focused}) => ImageComponent('home'),
           tabBarLabel: 'Home',
         }}
       />

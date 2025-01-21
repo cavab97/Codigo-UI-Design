@@ -30,6 +30,17 @@ export default function ImageComponent(shortForm: any) {
           }}
           source={require('../../assets/images/On-2.png')}></Image>
       );
+    case 'appIcon':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(80),
+            width: matrix.horizontalScale(120),
+            padding: 5,
+          }}
+          source={require('../../assets/images/image-3.png')}></Image>
+      );
     // case "linkd":
     //   return (
     //     <Image

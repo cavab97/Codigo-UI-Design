@@ -13,6 +13,7 @@
     "coverage": "jest — coverage && open ./coverage/lcov-report/index.html"
   },
   "dependencies": {
+    "@coder-shubh/react-native-image-slider": "^1.0.7",
     "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/drawer": "^6.6.2",
@@ -28,12 +29,12 @@
     "react-native-reanimated": "^3.1.0",
     "react-native-safe-area-context": "^4.5.2",
     "react-native-screens": "^3.20.0",
+    "react-native-vector-icons": "^10.2.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.2.3",
-    "redux-thunk": "^2.4.2",
-    "react-native-vector-icons": "^10.2.0"
+    "redux-thunk": "^2.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
