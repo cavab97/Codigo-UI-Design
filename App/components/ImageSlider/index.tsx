@@ -10,17 +10,16 @@ function ImageSliderComponent() {
     <ImageSlider
       testID="imageSlider_testID"
       images={images}
-      imageHeight={200}
+      imageHeight={220}
       dotSize={10}
       dotColor="silver"
       activeDotColor="blue"
       showNavigationButtons={false}
       showIndicatorDots={true}
       imageLabel={false}
-      //   label="Example Label"
       extrapolate="clamp"
       autoSlideInterval={5000}
-      containerStyle={{position: 'absolute'}}
+      containerStyle={{position: 'absolute', bottom: 100}} // Image container style
       radius={5}
     />
   );

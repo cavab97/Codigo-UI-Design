@@ -41,18 +41,93 @@ export default function ImageComponent(shortForm: any) {
           }}
           source={require('../../assets/images/image-3.png')}></Image>
       );
-    // case "linkd":
-    //   return (
-    //     <Image
-    //       source={require("../../../assets/ImageComponentImage/Facebook.png")}
-    //     ></Image>
-    //   );
-    // case "whatsapp":
-    //   return (
-    //     <Image
-    //       source={require("../../../assets/ImageComponentImage/Facebook.png")}
-    //     ></Image>
-    //   );
+    case 'Map':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(35),
+            width: matrix.horizontalScale(35),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-342.png')}></Image>
+      );
+    case 'Inhabitants':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(35),
+            width: matrix.horizontalScale(35),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-342-2.png')}></Image>
+      );
+    case 'Shows':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(35),
+            width: matrix.horizontalScale(35),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-341.png')}></Image>
+      );
+    case 'Shopping':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(35),
+            width: matrix.horizontalScale(35),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-275.png')}></Image>
+      );
+    case 'Dine':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(35),
+            width: matrix.horizontalScale(35),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-310.png')}></Image>
+      );
+    case 'Meet & Greets':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(50),
+            width: matrix.horizontalScale(50),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Layer-1.png')}></Image>
+      );
+    case '1':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(25),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Icons-V2-2.png')}></Image>
+      );
+    case '2':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(25),
+            width: matrix.horizontalScale(25),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Icons-V2.png')}></Image>
+      );
     default:
       return '';
   }
