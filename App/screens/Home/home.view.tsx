@@ -6,6 +6,9 @@ import {matrix} from '../../helpers';
 import ImageSliderComponent from '../../components/ImageSlider';
 import ImageComponent from '../../components/Image';
 import ScheduleSection from './component/scheduleSection';
+import HorizontalImageList from './component/bottomImage';
+import {ScrollView} from 'react-native-gesture-handler';
+import normalize from '../../helpers/normalizeText';
 const categories = [
   'Map',
   'Inhabitants',
@@ -33,36 +36,35 @@ function HomeView({navigation}: any) {
     <View style={{alignItems: 'center', margin: 10}}>
       <View
         style={{
-          borderRadius: 30,
+          borderRadius: 50,
           backgroundColor: '#D3D3D3',
-          height: 50,
-          width: 50,
+          height: 60,
+          width: 60,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
         {ImageComponent(item)}
       </View>
-      <Text>{item}</Text>
+      <Text style={{fontSize: normalize(12)}}>{item}</Text>
     </View>
   );
   return (
-    <View
+    <ScrollView
       style={{
-        flex: 1,
+        // flex: 1,
         // alignItems: 'center',
+        // justifyContent: 'space-evenly',
         backgroundColor: '#fff',
-        justifyContent: 'space-evenly',
         paddingHorizontal: matrix.horizontalScale(0),
       }}>
       <StatusBar animated={true} backgroundColor="#61dafb" hidden={true} />
-      <View style={{height: '30%', marginTop: 10}}>
+      <View style={{height: '27%', marginTop: 0}}>
         <ImageSliderComponent />
       </View>
       <View
         style={{
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: 'grey',
         }}>
         <FlatList
           data={categories}
@@ -70,21 +72,37 @@ function HomeView({navigation}: any) {
           numColumns={4}
           key={4}
           renderItem={({item}) => renderItem(item)}
-          contentContainerStyle={{padding: 0, backgroundColor: 'yellow'}}
+          contentContainerStyle={{padding: 0}}
         />
       </View>
       {ScheduleSection()}
 
-      <Text
-        style={{
-          fontWeight: 'bold',
-          fontSize: matrix.moderateScale(18),
-          alignSelf: 'flex-start',
-          color: 'grey',
-        }}>
-        Upcoming Shows
-      </Text>
-      <View
+      <View>
+        <View
+          style={{
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              fontWeight: 'bold',
+              fontSize: normalize(16),
+              alignSelf: 'flex-start',
+              color: 'grey',
+              padding: 5,
+            }}>
+            Upcoming Shows
+          </Text>
+          <Text style={{color: '#FF0000', fontSize: normalize(12)}}>
+            View all
+          </Text>
+        </View>
+
+        {HorizontalImageList()}
+      </View>
+
+      {/* <View
         style={{
           flexDirection: 'column',
           width: '100%',
@@ -102,8 +120,8 @@ function HomeView({navigation}: any) {
             Get Started
           </Text>
         </Button>
-      </View>
-    </View>
+      </View> */}
+    </ScrollView>
   );
 }
 

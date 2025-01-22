@@ -1,16 +1,17 @@
 import {StyleSheet} from 'react-native';
+import normalize from '../helpers/normalizeText';
 export const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
+    fontSize: normalize(22),
     fontWeight: '600',
   },
   sectionDescription: {
     marginTop: 8,
-    fontSize: 18,
+    fontSize: normalize(16),
     fontWeight: '400',
   },
   highlight: {

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import ImageComponent from '../../../../components/Image';
+import normalize from '../../../../helpers/normalizeText';
 
 const parkInfo = [
   {
@@ -44,8 +45,6 @@ const ScheduleSection = () => {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    backgroundColor: 'yellow',
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingHorizontal: 10,
@@ -66,17 +65,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 18,
+    fontSize: normalize(16),
     fontWeight: 'bold',
     marginBottom: 5,
   },
   time: {
-    fontSize: 16,
+    fontSize: normalize(14),
     color: '#555',
     marginBottom: 5,
   },
   type: {
-    fontSize: 14,
+    fontSize: normalize(12),
     color: '#FF0000',
   },
   list: {

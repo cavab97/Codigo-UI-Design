@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import normalize from '../../helpers/normalizeText';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -10,7 +11,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
     padding: 25,
-    fontSize: 30,
+    fontSize: normalize(28),
     backgroundColor: 'steelblue',
   },
 });

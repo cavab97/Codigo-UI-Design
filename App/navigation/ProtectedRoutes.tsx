@@ -10,6 +10,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ImageComponent from '../components/Image';
 import {Text, View} from 'react-native';
+import normalize from '../helpers/normalizeText';
 
 // const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -23,7 +24,7 @@ function ProtectedRoutes() {
         tabBarActiveTintColor: '#645209',
         tabBarInactiveTintColor: '#64748b',
         tabBarLabelStyle: {
-          fontSize: 14,
+          fontSize: normalize(12),
         },
         tabBarStyle: {
           height: 60,

@@ -128,6 +128,17 @@ export default function ImageComponent(shortForm: any) {
           }}
           source={require('../../assets/images/Icons-V2.png')}></Image>
       );
+    case 'time':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(25),
+            width: matrix.horizontalScale(25),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Icons-V2-2.png')}></Image>
+      );
     default:
       return '';
   }
