@@ -2,6 +2,9 @@ import React from 'react';
 import {View, Text, StyleSheet, FlatList, Image} from 'react-native';
 import ImageComponent from '../../../../components/Image';
 import normalize from '../../../../helpers/normalizeText';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {DETAILS_ROUTE} from '../../../../navigation/Constants';
+import NavigationService from '../../../../navigation/NavigationService';
 
 const mockData = [
   {
@@ -50,7 +53,9 @@ const HorizontalImageList = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={({item}) => (
-          <View style={styles.card}>
+          <TouchableOpacity
+            onPress={() => NavigationService.navigate(DETAILS_ROUTE)}
+            style={styles.card}>
             <Image source={{uri: item.image}} style={styles.image} />
             <View style={styles.timeContainer}>
               {ImageComponent('time')}
@@ -58,7 +63,7 @@ const HorizontalImageList = () => {
             </View>
 
             <Text style={styles.title}>{item.title}</Text>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>

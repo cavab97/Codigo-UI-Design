@@ -77,7 +77,7 @@ function HomeView({navigation}: any) {
       </View>
       {ScheduleSection()}
 
-      <View>
+      <View style={{paddingHorizontal: 15}}>
         <View
           style={{
             justifyContent: 'space-between',

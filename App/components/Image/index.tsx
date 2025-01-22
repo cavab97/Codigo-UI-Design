@@ -139,6 +139,28 @@ export default function ImageComponent(shortForm: any) {
           }}
           source={require('../../assets/images/Icons-V2-2.png')}></Image>
       );
+    case 'walk':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(20),
+            width: matrix.horizontalScale(20),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Ellipse-19.png')}></Image>
+      );
+    case 'close':
+      return (
+        <Image
+          resizeMode="contain"
+          style={{
+            height: matrix.verticalScale(25),
+            width: matrix.horizontalScale(25),
+            padding: 5,
+          }}
+          source={require('../../assets/images/Group-126.png')}></Image>
+      );
     default:
       return '';
   }
